@@ -1,0 +1,9 @@
+# Only these inputs are required by COPY instructions in the Dockerfile.
+**
+!Dockerfile
+!pyproject.toml
+!uv.lock
+!desktop/
+!desktop/supervisord.conf
+!desktop/terminal.desktop
+!.dockerignore

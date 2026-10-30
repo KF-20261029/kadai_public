@@ -1,0 +1,30 @@
+{
+  "dataset_id": "local/so101_pens",
+  "dataset_format": "LeRobot v2.1",
+  "dataset_episodes": 55,
+  "dataset_frames": 99000,
+  "curation_sha256": "e18d2ef5c643e1840cd90f787b84307359a02e20f3ab20da6f2b1f976c1ff38a",
+  "steps": 30000,
+  "intended_training_episodes": 49,
+  "intended_validation_episodes": 6,
+  "actual_loaded_training_episodes": 55,
+  "actual_loaded_validation_episodes": 55,
+  "independent_validation_split_passed": false,
+  "base_model": {
+    "repo_id": "dongyoonkim/so101-pi05-base",
+    "revision": "56325bafcca9ec3155b8bfdf655be7df17e7f09f"
+  },
+  "base_model_sha256": "16c1bbbb9ea55315dafb5d793e08818844bd9ebb8b14bd05bb6eb693da6439e5",
+  "adapter_sha256": "845931261fc0045471524726033a8d971aee3f12c5e8c4a7e64db75fa82f7677",
+  "normalization_sha256": "82a4d6372bd3e7fc1b6730078fd262c2747addad5ad1a62ae640e751b25907f0",
+  "saved_training_config_sha256": "82d142eb78b742fa71d38edc6a67f7a0451726ddd9f56a1142f15f7b6eaff690",
+  "published_training_config_sha256": "073cd2f53bc4a7435ba29097920c0d2d6e393f1abcae85a1592042ca7a1edce3",
+  "loss_metrics": "training_metrics.csv",
+  "environment": "training_environment.json",
+  "collection_validation": "collection_validation.json",
+  "dataset_validation": "dataset_validation.json",
+  "policy_evaluation": [
+    "lora_comparison.json",
+    "continuous_comparison.json"
+  ]
+}

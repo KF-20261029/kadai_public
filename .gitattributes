@@ -1,0 +1,2 @@
+# The trained adapter is larger than the regular GitHub file limit.
+/models/pen_lora/lora_adapters/adapter_model.safetensors filter=lfs diff=lfs merge=lfs -text

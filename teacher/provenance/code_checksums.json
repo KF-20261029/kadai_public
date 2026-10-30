@@ -1,0 +1,34 @@
+{
+  "scripts/collect_demonstrations.py": {
+    "source_sha256": "48669bc7bd90549ad299e5cef42699892adca9ff128ff2452f8c50cf24e9123d",
+    "published_sha256": "48669bc7bd90549ad299e5cef42699892adca9ff128ff2452f8c50cf24e9123d"
+  },
+  "scripts/curate_demonstrations.py": {
+    "source_sha256": "5fca21c79b330891897ce9fccf55f4627c69c6a57a2cea7183afa13156fa220f",
+    "published_sha256": "4161669e53a5f670220195056e265411eb2f227a5edd5964afdf825c46088bea"
+  },
+  "scripts/export_demonstration_videos.py": {
+    "source_sha256": "c5b63878db44b66466d2e6f8c715fa40609c0245fe598946c5e737d4f7c81ff3",
+    "published_sha256": "c5b63878db44b66466d2e6f8c715fa40609c0245fe598946c5e737d4f7c81ff3"
+  },
+  "scripts/prepare_pen_dataset.py": {
+    "source_sha256": "b83c225f4bb6c06b28596dfeb9192b0a2a40ac47649d39e403654e1c62181ac1",
+    "published_sha256": "b83c225f4bb6c06b28596dfeb9192b0a2a40ac47649d39e403654e1c62181ac1"
+  },
+  "scripts/repair_pen_videos.py": {
+    "source_sha256": "c65fcc7fbb397f5d06bcb0cf2e318002cedcc7886ab19dea5a9d1287c4eb0c24",
+    "published_sha256": "c65fcc7fbb397f5d06bcb0cf2e318002cedcc7886ab19dea5a9d1287c4eb0c24"
+  },
+  "scripts/simulation.py": {
+    "source_sha256": "abe4ba690540e3c73c4e5cd5dc9c44d343d92b59b945b8af713c903af0afcfe4",
+    "published_sha256": "abe4ba690540e3c73c4e5cd5dc9c44d343d92b59b945b8af713c903af0afcfe4"
+  },
+  "scripts/validate_demonstrations.py": {
+    "source_sha256": "932680ba07563ac621445e688e39a2eb8daa86865bf6595f36c2fa98e5514da6",
+    "published_sha256": "932680ba07563ac621445e688e39a2eb8daa86865bf6595f36c2fa98e5514da6"
+  },
+  "scripts/validate_pen_dataset.py": {
+    "source_sha256": "df6f4c36ac8245585d38c2be3bcc796b18ab630879afeb05081fbc6cf9a93d8e",
+    "published_sha256": "df6f4c36ac8245585d38c2be3bcc796b18ab630879afeb05081fbc6cf9a93d8e"
+  }
+}

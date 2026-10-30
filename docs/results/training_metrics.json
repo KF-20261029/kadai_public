@@ -1,0 +1,10 @@
+{
+  "source_log_sha256": "d330bfc71dedb7088910d54726417e30b446c3f2d3a88b17adc0a96c8d0dc6e9",
+  "metric_records": 600,
+  "first_reported_loss": 0.041,
+  "last_reported_loss": 0.001,
+  "minimum_reported_loss": 0.0,
+  "step_format": "Original log labels; K suffix values are rounded.",
+  "metric_precision": "Values retain the precision printed in the log.",
+  "loss_scope": "Training loss; not independent validation loss or task success."
+}

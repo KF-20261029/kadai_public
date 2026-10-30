@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    env:
+      PYTHONPATH: ros2_ws/src/so101_policy
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          lfs: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install check dependencies
+        run: python -m pip install -r .github/requirements-ci.txt
+      - name: Check Python syntax and configuration formats
+        run: python scripts/check_source.py
+      - name: Run unit tests
+        run: python -m pytest -q ros2_ws/src/so101_policy/test
+      - name: Validate Compose configurations
+        run: |
+          docker compose --profile training config --quiet
+          docker compose -f teacher/compose.yaml config --quiet

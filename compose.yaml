@@ -1,0 +1,61 @@
+name: so101-public
+services:
+  ros2:
+    build: .
+    image: so101-pi05-public:jazzy
+    user: "${LOCAL_UID:-1000}:${LOCAL_GID:-1000}"
+    working_dir: /workspace
+    init: true
+    stdin_open: true
+    tty: true
+    shm_size: 2g
+    environment:
+      ROS_DOMAIN_ID: "${ROS_DOMAIN_ID:-85}"
+    ports:
+      - "127.0.0.1:${NOVNC_PORT:-6080}:6080"
+    volumes:
+      - .:/workspace
+      - cache:/cache
+      - desktop_home:/home/ubuntu
+    healthcheck:
+      test: ["CMD-SHELL", "xdpyinfo -display :1 >/dev/null 2>&1 && python -c \"import urllib.request; urllib.request.urlopen('http://127.0.0.1:6080/vnc.html', timeout=2)\""]
+      interval: 5s
+      timeout: 4s
+      start_period: 30s
+      retries: 6
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu, compute, utility, graphics]
+  training:
+    profiles: [training]
+    build: ./training
+    image: so101-pi05-training:pixi
+    user: "1000:1000"
+    working_dir: /workspace/training
+    init: true
+    shm_size: 8g
+    volumes:
+      - .:/workspace
+      - cache:/cache
+      - training_environment:/workspace/training/.pixi
+    environment:
+      MUJOCO_GL: egl
+      PYOPENGL_PLATFORM: egl
+      NVIDIA_DRIVER_CAPABILITIES: compute,utility,graphics
+      PYTORCH_CUDA_ALLOC_CONF: expandable_segments:True
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu,compute,utility,graphics]
+volumes:
+  desktop_home:
+  training_environment:
+  cache:
+    # Compose creates an isolated project cache on first use.

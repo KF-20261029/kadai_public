@@ -1,0 +1,10 @@
+/**:
+  ros__parameters:
+    mujoco_plugins:
+      mujoco_camera_plugin:
+        type: mujoco_ros2_control_plugins/CameraPlugin
+        camera_publish_rate: 30.0
+        top:
+          policy: polled
+        wrist_cam:
+          policy: polled

@@ -1,0 +1,15 @@
+{
+  "attempted_episodes": 78,
+  "successful_episodes": 56,
+  "maximum_attempts": 200,
+  "initial_position_jitter_m": 0.012,
+  "initial_yaw_jitter_rad": 0.4,
+  "seed_start": 2000,
+  "seed_end": 2077,
+  "curated_training_episodes": 55,
+  "curated_training_frames": 99000,
+  "curation_sha256": "e18d2ef5c643e1840cd90f787b84307359a02e20f3ab20da6f2b1f976c1ff38a",
+  "code_origin": "Task-specific IK collection and data preparation code",
+  "collected_dataset_version": "LeRobot v3",
+  "training_dataset_version": "LeRobot v2.1"
+}

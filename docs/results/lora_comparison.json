@@ -1,0 +1,61 @@
+{
+  "trials_per_model": 10,
+  "criterion": "Three pens inserted and released for at least 2 seconds",
+  "normalization": "Task state and action statistics shared by both models",
+  "base_successes": 0,
+  "lora_successes": 2,
+  "base_success_rate": 0.0,
+  "lora_success_rate": 0.2,
+  "pairs": [
+    {
+      "seed": 7100,
+      "base": false,
+      "lora": true
+    },
+    {
+      "seed": 7101,
+      "base": false,
+      "lora": false
+    },
+    {
+      "seed": 7102,
+      "base": false,
+      "lora": true
+    },
+    {
+      "seed": 7103,
+      "base": false,
+      "lora": false
+    },
+    {
+      "seed": 7104,
+      "base": false,
+      "lora": false
+    },
+    {
+      "seed": 7105,
+      "base": false,
+      "lora": false
+    },
+    {
+      "seed": 7106,
+      "base": false,
+      "lora": false
+    },
+    {
+      "seed": 7107,
+      "base": false,
+      "lora": false
+    },
+    {
+      "seed": 7108,
+      "base": false,
+      "lora": false
+    },
+    {
+      "seed": 7109,
+      "base": false,
+      "lora": false
+    }
+  ]
+}

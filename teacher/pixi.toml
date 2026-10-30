@@ -1,0 +1,20 @@
+[workspace]
+name = "so101-pi05"
+channels = ["conda-forge"]
+platforms = [{ platform = "linux-64", cuda = "12.6" }]
+
+[dependencies]
+python = "3.10.*"
+ffmpeg = "7.1.1.*"
+
+[pypi-dependencies]
+lerobot = { git = "https://github.com/huggingface/lerobot.git", rev = "8fff0fde7c79f23a93d845d1a50e985de01f8b8a", extras = ["pi", "feetech"] }
+torch = { version = "==2.7.1+cu126", index = "https://download.pytorch.org/whl/cu126" }
+torchvision = { version = "==0.22.1+cu126", index = "https://download.pytorch.org/whl/cu126" }
+torchcodec = { version = "==0.5", index = "https://download.pytorch.org/whl/cpu" }
+matplotlib = "==3.10.7"
+numpy = "==2.2.6"
+sentencepiece = "==0.2.1"
+pillow = "==12.3.0"
+mujoco = "==3.3.7"
+peft = "==0.18.0"

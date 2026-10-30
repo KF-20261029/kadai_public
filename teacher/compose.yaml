@@ -1,0 +1,29 @@
+name: so101-teacher
+services:
+  teacher:
+    build: .
+    image: so101-ik-teacher:pixi
+    user: "1000:1000"
+    working_dir: /workspace/teacher
+    init: true
+    stdin_open: true
+    tty: true
+    shm_size: 2g
+    volumes:
+      - ..:/workspace
+      - environment:/workspace/teacher/.pixi
+      - cache:/cache
+    environment:
+      MUJOCO_GL: egl
+      PYOPENGL_PLATFORM: egl
+      NVIDIA_DRIVER_CAPABILITIES: compute,utility,graphics
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu,compute,utility,graphics]
+volumes:
+  environment:
+  cache:

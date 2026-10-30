@@ -1,0 +1,47 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 300
+    enforce_command_limits: false
+
+joint_state_broadcaster:
+  ros__parameters:
+    type: joint_state_broadcaster/JointStateBroadcaster
+    update_rate: 300
+    joints:
+      - shoulder_pan
+      - shoulder_lift
+      - elbow_flex
+      - wrist_flex
+      - wrist_roll
+      - gripper
+    interfaces:
+      - position
+      - velocity
+      - effort
+
+position_controller:
+  ros__parameters:
+    type: forward_command_controller/ForwardCommandController
+    interface_name: position
+    joints:
+      - shoulder_pan
+      - shoulder_lift
+      - elbow_flex
+      - wrist_flex
+      - wrist_roll
+      - gripper
+
+trajectory_controller:
+  ros__parameters:
+    type: joint_trajectory_controller/JointTrajectoryController
+    joints:
+      - shoulder_pan
+      - shoulder_lift
+      - elbow_flex
+      - wrist_flex
+      - wrist_roll
+      - gripper
+    command_interfaces: [position]
+    state_interfaces: [position, velocity]
+    interpolation_method: none
+    allow_partial_joints_goal: false

@@ -1,0 +1,18 @@
+{
+  "config.json": {
+    "sha256": "d6dd2a17f581ffaed5f875bf1c17958f7a09c8ae3af8030e6c775d09c33c7ba9",
+    "bytes": 1936
+  },
+  "lora_adapters/adapter_config.json": {
+    "sha256": "668e8beb7e633e8b4ddebeb7b165abc06b6f19c96af2d747aebfbdab5d7dbc40",
+    "bytes": 1079
+  },
+  "lora_adapters/adapter_model.safetensors": {
+    "sha256": "845931261fc0045471524726033a8d971aee3f12c5e8c4a7e64db75fa82f7677",
+    "bytes": 123763160
+  },
+  "normalize_buffers.pt": {
+    "sha256": "82a4d6372bd3e7fc1b6730078fd262c2747addad5ad1a62ae640e751b25907f0",
+    "bytes": 2497
+  }
+}

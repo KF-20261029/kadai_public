@@ -1,0 +1,12 @@
+{
+  "model": {
+    "repo_id": "dongyoonkim/so101-pi05-base",
+    "revision": "56325bafcca9ec3155b8bfdf655be7df17e7f09f"
+  },
+  "model_sha256": "16c1bbbb9ea55315dafb5d793e08818844bd9ebb8b14bd05bb6eb693da6439e5",
+  "tokenizer": {
+    "url": "https://storage.googleapis.com/big_vision/paligemma_tokenizer.model",
+    "sha256": "8986bb4f423f07f8c7f70d0dbe3526fb2316056c17bae71b1ea975e77a168fc6"
+  },
+  "instruction": "Grab pens and place into pen holder"
+}

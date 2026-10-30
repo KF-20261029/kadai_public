@@ -1,0 +1,76 @@
+<mujoco model="so101_pen_holder">
+  <include file="assets/so101/so101.xml" />
+  <compiler meshdir="assets/so101/assets" />
+  <option timestep="0.0033333333333333335" integrator="implicitfast" gravity="0 0 -9.81" />
+  <visual>
+    <global offwidth="1280" offheight="960" />
+    <headlight diffuse="0.65 0.65 0.65" ambient="0.35 0.35 0.35" specular="0 0 0" />
+  </visual>
+  <worldbody>
+    <light pos="0 -0.2 1.5" dir="0 0 -1" directional="true" diffuse="0.8 0.8 0.8" />
+    <geom name="table" type="plane" size="1 1 0.001" rgba="0.93 0.92 0.89 1" friction="0.8 0.02 0.001" condim="4" />
+    <camera name="top" pos="0 -0.21 0.64" xyaxes="1 0 0 0 1 0" fovy="53" resolution="640 480" />
+    <camera name="overview" pos="0.48 -0.65 0.43" xyaxes="0.80 0.60 0 -0.29 0.39 0.87" fovy="48" resolution="640 480" />
+    <body name="pen_holder" pos="-0.045 -0.275 0">
+      <geom name="holder_bottom" type="cylinder" size="0.036 0.0025" pos="0 0 0.0025" rgba="0.06 0.06 0.06 1" friction="0.8 0.02 0.001" />
+      <geom name="holder_wall_0" type="capsule" size="0.0016" fromto="0.0340000 0.0000000 0.006 0.0340000 0.0000000 0.072" rgba="0.07 0.07 0.07 1" friction="0.8 0.02 0.001" />
+      <geom name="holder_wall_1" type="capsule" size="0.0016" fromto="0.0335814 0.0053188 0.006 0.0335814 0.0053188 0.072" rgba="0.07 0.07 0.07 1" friction="0.8 0.02 0.001" />
+      <geom name="holder_wall_2" type="capsule" size="0.0016" fromto="0.0323359 0.0105066 0.006 0.0323359 0.0105066 0.072" rgba="0.07 0.07 0.07 1" friction="0.8 0.02 0.001" />
+      <geom name="holder_wall_3" type="capsule" size="0.0016" fromto="0.0302942 0.0154357 0.006 0.0302942 0.0154357 0.072" rgba="0.07 0.07 0.07 1" friction="0.8 0.02 0.001" />
+      <geom name="holder_wall_4" type="capsule" size="0.0016" fromto="0.0275066 0.0199847 0.006 0.0275066 0.0199847 0.072" rgba="0.07 0.07 0.07 1" friction="0.8 0.02 0.001" />
+      <geom name="holder_wall_5" type="capsule" size="0.0016" fromto="0.0240416 0.0240416 0.006 0.0240416 0.0240416 0.072" rgba="0.07 0.07 0.07 1" friction="0.8 0.02 0.001" />
+      <geom name="holder_wall_6" type="capsule" size="0.0016" fromto="0.0199847 0.0275066 0.006 0.0199847 0.0275066 0.072" rgba="0.07 0.07 0.07 1" friction="0.8 0.02 0.001" />
+      <geom name="holder_wall_7" type="capsule" size="0.0016" fromto="0.0154357 0.0302942 0.006 0.0154357 0.0302942 0.072" rgba="0.07 0.07 0.07 1" friction="0.8 0.02 0.001" />
+      <geom name="holder_wall_8" type="capsule" size="0.0016" fromto="0.0105066 0.0323359 0.006 0.0105066 0.0323359 0.072" rgba="0.07 0.07 0.07 1" friction="0.8 0.02 0.001" />
+      <geom name="holder_wall_9" type="capsule" size="0.0016" fromto="0.0053188 0.0335814 0.006 0.0053188 0.0335814 0.072" rgba="0.07 0.07 0.07 1" friction="0.8 0.02 0.001" />
+      <geom name="holder_wall_10" type="capsule" size="0.0016" fromto="0.0000000 0.0340000 0.006 0.0000000 0.0340000 0.072" rgba="0.07 0.07 0.07 1" friction="0.8 0.02 0.001" />
+      <geom name="holder_wall_11" type="capsule" size="0.0016" fromto="-0.0053188 0.0335814 0.006 -0.0053188 0.0335814 0.072" rgba="0.07 0.07 0.07 1" friction="0.8 0.02 0.001" />
+      <geom name="holder_wall_12" type="capsule" size="0.0016" fromto="-0.0105066 0.0323359 0.006 -0.0105066 0.0323359 0.072" rgba="0.07 0.07 0.07 1" friction="0.8 0.02 0.001" />
+      <geom name="holder_wall_13" type="capsule" size="0.0016" fromto="-0.0154357 0.0302942 0.006 -0.0154357 0.0302942 0.072" rgba="0.07 0.07 0.07 1" friction="0.8 0.02 0.001" />
+      <geom name="holder_wall_14" type="capsule" size="0.0016" fromto="-0.0199847 0.0275066 0.006 -0.0199847 0.0275066 0.072" rgba="0.07 0.07 0.07 1" friction="0.8 0.02 0.001" />
+      <geom name="holder_wall_15" type="capsule" size="0.0016" fromto="-0.0240416 0.0240416 0.006 -0.0240416 0.0240416 0.072" rgba="0.07 0.07 0.07 1" friction="0.8 0.02 0.001" />
+      <geom name="holder_wall_16" type="capsule" size="0.0016" fromto="-0.0275066 0.0199847 0.006 -0.0275066 0.0199847 0.072" rgba="0.07 0.07 0.07 1" friction="0.8 0.02 0.001" />
+      <geom name="holder_wall_17" type="capsule" size="0.0016" fromto="-0.0302942 0.0154357 0.006 -0.0302942 0.0154357 0.072" rgba="0.07 0.07 0.07 1" friction="0.8 0.02 0.001" />
+      <geom name="holder_wall_18" type="capsule" size="0.0016" fromto="-0.0323359 0.0105066 0.006 -0.0323359 0.0105066 0.072" rgba="0.07 0.07 0.07 1" friction="0.8 0.02 0.001" />
+      <geom name="holder_wall_19" type="capsule" size="0.0016" fromto="-0.0335814 0.0053188 0.006 -0.0335814 0.0053188 0.072" rgba="0.07 0.07 0.07 1" friction="0.8 0.02 0.001" />
+      <geom name="holder_wall_20" type="capsule" size="0.0016" fromto="-0.0340000 0.0000000 0.006 -0.0340000 0.0000000 0.072" rgba="0.07 0.07 0.07 1" friction="0.8 0.02 0.001" />
+      <geom name="holder_wall_21" type="capsule" size="0.0016" fromto="-0.0335814 -0.0053188 0.006 -0.0335814 -0.0053188 0.072" rgba="0.07 0.07 0.07 1" friction="0.8 0.02 0.001" />
+      <geom name="holder_wall_22" type="capsule" size="0.0016" fromto="-0.0323359 -0.0105066 0.006 -0.0323359 -0.0105066 0.072" rgba="0.07 0.07 0.07 1" friction="0.8 0.02 0.001" />
+      <geom name="holder_wall_23" type="capsule" size="0.0016" fromto="-0.0302942 -0.0154357 0.006 -0.0302942 -0.0154357 0.072" rgba="0.07 0.07 0.07 1" friction="0.8 0.02 0.001" />
+      <geom name="holder_wall_24" type="capsule" size="0.0016" fromto="-0.0275066 -0.0199847 0.006 -0.0275066 -0.0199847 0.072" rgba="0.07 0.07 0.07 1" friction="0.8 0.02 0.001" />
+      <geom name="holder_wall_25" type="capsule" size="0.0016" fromto="-0.0240416 -0.0240416 0.006 -0.0240416 -0.0240416 0.072" rgba="0.07 0.07 0.07 1" friction="0.8 0.02 0.001" />
+      <geom name="holder_wall_26" type="capsule" size="0.0016" fromto="-0.0199847 -0.0275066 0.006 -0.0199847 -0.0275066 0.072" rgba="0.07 0.07 0.07 1" friction="0.8 0.02 0.001" />
+      <geom name="holder_wall_27" type="capsule" size="0.0016" fromto="-0.0154357 -0.0302942 0.006 -0.0154357 -0.0302942 0.072" rgba="0.07 0.07 0.07 1" friction="0.8 0.02 0.001" />
+      <geom name="holder_wall_28" type="capsule" size="0.0016" fromto="-0.0105066 -0.0323359 0.006 -0.0105066 -0.0323359 0.072" rgba="0.07 0.07 0.07 1" friction="0.8 0.02 0.001" />
+      <geom name="holder_wall_29" type="capsule" size="0.0016" fromto="-0.0053188 -0.0335814 0.006 -0.0053188 -0.0335814 0.072" rgba="0.07 0.07 0.07 1" friction="0.8 0.02 0.001" />
+      <geom name="holder_wall_30" type="capsule" size="0.0016" fromto="-0.0000000 -0.0340000 0.006 -0.0000000 -0.0340000 0.072" rgba="0.07 0.07 0.07 1" friction="0.8 0.02 0.001" />
+      <geom name="holder_wall_31" type="capsule" size="0.0016" fromto="0.0053188 -0.0335814 0.006 0.0053188 -0.0335814 0.072" rgba="0.07 0.07 0.07 1" friction="0.8 0.02 0.001" />
+      <geom name="holder_wall_32" type="capsule" size="0.0016" fromto="0.0105066 -0.0323359 0.006 0.0105066 -0.0323359 0.072" rgba="0.07 0.07 0.07 1" friction="0.8 0.02 0.001" />
+      <geom name="holder_wall_33" type="capsule" size="0.0016" fromto="0.0154357 -0.0302942 0.006 0.0154357 -0.0302942 0.072" rgba="0.07 0.07 0.07 1" friction="0.8 0.02 0.001" />
+      <geom name="holder_wall_34" type="capsule" size="0.0016" fromto="0.0199847 -0.0275066 0.006 0.0199847 -0.0275066 0.072" rgba="0.07 0.07 0.07 1" friction="0.8 0.02 0.001" />
+      <geom name="holder_wall_35" type="capsule" size="0.0016" fromto="0.0240416 -0.0240416 0.006 0.0240416 -0.0240416 0.072" rgba="0.07 0.07 0.07 1" friction="0.8 0.02 0.001" />
+      <geom name="holder_wall_36" type="capsule" size="0.0016" fromto="0.0275066 -0.0199847 0.006 0.0275066 -0.0199847 0.072" rgba="0.07 0.07 0.07 1" friction="0.8 0.02 0.001" />
+      <geom name="holder_wall_37" type="capsule" size="0.0016" fromto="0.0302942 -0.0154357 0.006 0.0302942 -0.0154357 0.072" rgba="0.07 0.07 0.07 1" friction="0.8 0.02 0.001" />
+      <geom name="holder_wall_38" type="capsule" size="0.0016" fromto="0.0323359 -0.0105066 0.006 0.0323359 -0.0105066 0.072" rgba="0.07 0.07 0.07 1" friction="0.8 0.02 0.001" />
+      <geom name="holder_wall_39" type="capsule" size="0.0016" fromto="0.0335814 -0.0053188 0.006 0.0335814 -0.0053188 0.072" rgba="0.07 0.07 0.07 1" friction="0.8 0.02 0.001" />
+    </body>
+    <body name="pen_0" pos="-0.045 -0.16 0.012">
+      <freejoint name="pen_0_free" />
+      <geom name="pen_0_barrel" type="capsule" size="0.0045" fromto="-0.065 0 0 0.065 0 0" mass="0.012" rgba="0.10 0.55 0.80 1" condim="4" friction="0.8 0.01 0.0005" solref="0.01 1" />
+      <geom type="capsule" size="0.002" fromto="-0.072 0 0 -0.061 0 0" mass="0" rgba="0.55 0.55 0.55 1" contype="0" conaffinity="0" />
+      <geom type="capsule" size="0.005" fromto="0.054 0 0 0.066 0 0" mass="0" rgba="0.10 0.10 0.10 1" contype="0" conaffinity="0" />
+    </body>
+    <body name="pen_1" pos="0.06 -0.225 0.012">
+      <freejoint name="pen_1_free" />
+      <geom name="pen_1_barrel" type="capsule" size="0.0045" fromto="-0.065 0 0 0.065 0 0" mass="0.012" rgba="0.08 0.20 0.55 1" condim="4" friction="0.8 0.01 0.0005" solref="0.01 1" />
+      <geom type="capsule" size="0.002" fromto="-0.072 0 0 -0.061 0 0" mass="0" rgba="0.55 0.55 0.55 1" contype="0" conaffinity="0" />
+      <geom type="capsule" size="0.005" fromto="0.054 0 0 0.066 0 0" mass="0" rgba="0.10 0.10 0.10 1" contype="0" conaffinity="0" />
+    </body>
+    <body name="pen_2" pos="0.11 -0.13 0.012">
+      <freejoint name="pen_2_free" />
+      <geom name="pen_2_barrel" type="capsule" size="0.0045" fromto="-0.065 0 0 0.065 0 0" mass="0.012" rgba="0.13 0.70 0.23 1" condim="4" friction="0.8 0.01 0.0005" solref="0.01 1" />
+      <geom type="capsule" size="0.002" fromto="-0.072 0 0 -0.061 0 0" mass="0" rgba="0.55 0.55 0.55 1" contype="0" conaffinity="0" />
+      <geom type="capsule" size="0.005" fromto="0.054 0 0 0.066 0 0" mass="0" rgba="0.10 0.10 0.10 1" contype="0" conaffinity="0" />
+    </body>
+  </worldbody>
+</mujoco>

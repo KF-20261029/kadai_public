@@ -1,0 +1,54 @@
+# Private work notes and local assistant settings.
+/AGENTS.md
+/.claude/
+/aaa
+/archive/
+
+# Generated results, logs, installed packages, and local environments.
+/outputs/
+/.evaluation_deps/
+/.pixi/
+/.pytest_cache/
+/ros2_ws/build/
+/ros2_ws/install/
+/ros2_ws/log/
+**/__pycache__/
+*.py[cod]
+*.log
+/MUJOCO_LOG.TXT
+
+# Local provenance includes absolute source paths.
+/assets/teacher_preview.json
+
+# Presentation inputs supplied separately from the executable environment.
+/jingle/
+
+# Local credentials must not be committed.
+/.env
+/.env.*
+!/.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+
+# Optional local caches and environments.
+/cache/
+/.venv/
+/.cache/
+
+# Generated teacher datasets and its isolated environment.
+/teacher/outputs/
+/teacher/.pixi/
+/teacher/.cache/
+
+# New training artifacts and its isolated environment.
+/training/outputs/
+/training/.pixi/
+/training/.cache/
+
+# Editor recovery and backup files.
+*.swp
+*.swo
+*~

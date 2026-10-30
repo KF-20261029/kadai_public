@@ -1,0 +1,682 @@
+{
+  "passed": true,
+  "successful_episodes": 55,
+  "dataset_frames": 99000,
+  "collected_successful_episodes": 56,
+  "dataset_directory": "training_dataset",
+  "curation": {
+    "source_episodes": 56,
+    "training_episodes": 55,
+    "excluded_episode_indices": [
+      46
+    ],
+    "exclusions": [
+      {
+        "source_episode_index": 46,
+        "camera": "observation.images.wrist",
+        "expected_frames": 1800,
+        "recorded_segment_frames": 1799,
+        "reason": "Incomplete recorded camera segment; excluded without synthesizing frames."
+      }
+    ],
+    "episode_mapping": {
+      "0": 0,
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5,
+      "6": 6,
+      "7": 7,
+      "8": 8,
+      "9": 9,
+      "10": 10,
+      "11": 11,
+      "12": 12,
+      "13": 13,
+      "14": 14,
+      "15": 15,
+      "16": 16,
+      "17": 17,
+      "18": 18,
+      "19": 19,
+      "20": 20,
+      "21": 21,
+      "22": 22,
+      "23": 23,
+      "24": 24,
+      "25": 25,
+      "26": 26,
+      "27": 27,
+      "28": 28,
+      "29": 29,
+      "30": 30,
+      "31": 31,
+      "32": 32,
+      "33": 33,
+      "34": 34,
+      "35": 35,
+      "36": 36,
+      "37": 37,
+      "38": 38,
+      "39": 39,
+      "40": 40,
+      "41": 41,
+      "42": 42,
+      "43": 43,
+      "44": 44,
+      "45": 45,
+      "47": 46,
+      "48": 47,
+      "49": 48,
+      "50": 49,
+      "51": 50,
+      "52": 51,
+      "53": 52,
+      "54": 53,
+      "55": 54
+    },
+    "native_operation": "lerobot.datasets.dataset_tools.delete_episodes",
+    "synthetic_frames_added": false,
+    "original_dataset_modified": false
+  },
+  "attempted_episodes": 78,
+  "all_attempts_have_original_videos": true,
+  "dataset_actions_match_saved_commands": true,
+  "finite_states_and_actions": true,
+  "unique_successful_initial_positions": 55,
+  "evaluation_seeds": [
+    42,
+    43,
+    44
+  ],
+  "evaluation_seed_overlap": [],
+  "normalization_quantiles_checked": true,
+  "dataset_camera_videos": [
+    {
+      "file": "videos/observation.images.top/chunk-000/file-000.mp4",
+      "codec_name": "av1",
+      "width": 640,
+      "height": 480,
+      "avg_frame_rate": "30/1",
+      "duration": "2880.000000",
+      "nb_read_frames": "86400"
+    },
+    {
+      "file": "videos/observation.images.wrist/chunk-000/file-000.mp4",
+      "codec_name": "h264",
+      "width": 640,
+      "height": 480,
+      "avg_frame_rate": "30/1",
+      "duration": "2640.000000",
+      "nb_read_frames": "79200"
+    },
+    {
+      "file": "videos/observation.images.wrist/chunk-000/file-001.mp4",
+      "codec_name": "av1",
+      "width": 640,
+      "height": 480,
+      "avg_frame_rate": "30/1",
+      "duration": "660.000000",
+      "nb_read_frames": "19800"
+    },
+    {
+      "file": "videos/observation.images.top/chunk-000/file-001.mp4",
+      "codec_name": "h264",
+      "width": 640,
+      "height": 480,
+      "avg_frame_rate": "30/1",
+      "duration": "420.000000",
+      "nb_read_frames": "12600"
+    }
+  ],
+  "attempt_recordings": [
+    {
+      "seed": 2000,
+      "task_success": false,
+      "file": "recordings/trial_001_seed_2000.mp4",
+      "frames": 660,
+      "sha256": "0de9b130ef8b60c96588abc909e0826942330735791b917a4be144fccd6bff87"
+    },
+    {
+      "seed": 2001,
+      "task_success": true,
+      "file": "recordings/trial_002_seed_2001.mp4",
+      "frames": 1800,
+      "sha256": "94834e68c0a96049b26fb50e7505be8327afbc701d1f1ebf1821adbc02e52c5e"
+    },
+    {
+      "seed": 2002,
+      "task_success": true,
+      "file": "recordings/trial_003_seed_2002.mp4",
+      "frames": 1800,
+      "sha256": "f96fee0a6b2f5b69670f2ac103f229a34c9fe797d6e570331453464dcf1af770"
+    },
+    {
+      "seed": 2003,
+      "task_success": false,
+      "file": "recordings/trial_004_seed_2003.mp4",
+      "frames": 1800,
+      "sha256": "39df24b673613724947b0853b4e4b348eec633f6d9c3a55b850fc4ec221e7495"
+    },
+    {
+      "seed": 2004,
+      "task_success": true,
+      "file": "recordings/trial_005_seed_2004.mp4",
+      "frames": 1800,
+      "sha256": "b42808e048013d5970e62eea9ae097d427fdf21b04c50b03bf8cc05ece272d1d"
+    },
+    {
+      "seed": 2005,
+      "task_success": true,
+      "file": "recordings/trial_006_seed_2005.mp4",
+      "frames": 1800,
+      "sha256": "d1eb7807e4b76c9b491e7c83fe19faf5a3ffce3068f5bdce8b06356815ef0557"
+    },
+    {
+      "seed": 2006,
+      "task_success": true,
+      "file": "recordings/trial_007_seed_2006.mp4",
+      "frames": 1800,
+      "sha256": "b0329dc18ced109e210f92541248d6d4b10327dbed2f5cc5df1e963b4fb2ea65"
+    },
+    {
+      "seed": 2007,
+      "task_success": false,
+      "file": "recordings/trial_008_seed_2007.mp4",
+      "frames": 660,
+      "sha256": "59098f80eb211f89aef7706af94a2c4ddc6f2b02a63ba67aa6ea79843f18cc69"
+    },
+    {
+      "seed": 2008,
+      "task_success": true,
+      "file": "recordings/trial_009_seed_2008.mp4",
+      "frames": 1800,
+      "sha256": "fc01d9e405cf224c78c4a1f65a97c8480728e705ae16a7ba4fa44d8c4f901db5"
+    },
+    {
+      "seed": 2009,
+      "task_success": true,
+      "file": "recordings/trial_010_seed_2009.mp4",
+      "frames": 1800,
+      "sha256": "7d498711be88a8160569ffe82b74c698958f19e45cdc38b5f3884c89c71b4b3e"
+    },
+    {
+      "seed": 2010,
+      "task_success": true,
+      "file": "recordings/trial_011_seed_2010.mp4",
+      "frames": 1800,
+      "sha256": "6a5012e02e0ca75c646c6ad39247ee3d86d5db6f1bffbb26e99f52faa5451b82"
+    },
+    {
+      "seed": 2011,
+      "task_success": true,
+      "file": "recordings/trial_012_seed_2011.mp4",
+      "frames": 1800,
+      "sha256": "f2eeee56f2a0ed50cab27904dd5b0a3471f3f3a1665bc85223ee4366c3d35ccb"
+    },
+    {
+      "seed": 2012,
+      "task_success": true,
+      "file": "recordings/trial_013_seed_2012.mp4",
+      "frames": 1800,
+      "sha256": "3236e5a6233cba3bc2154fe1045fc53e502dd0fbeed8650eb3d00451a8d04d63"
+    },
+    {
+      "seed": 2013,
+      "task_success": true,
+      "file": "recordings/trial_014_seed_2013.mp4",
+      "frames": 1800,
+      "sha256": "d650112ab98a684736bcddf9aec2f455dc2fa42bdc8ea89ba852a7662d3aceea"
+    },
+    {
+      "seed": 2014,
+      "task_success": true,
+      "file": "recordings/trial_015_seed_2014.mp4",
+      "frames": 1800,
+      "sha256": "2db0f10caff9bc1f2a8c1220012e00f1ec4e5a330169b891c657001baa9c117d"
+    },
+    {
+      "seed": 2015,
+      "task_success": true,
+      "file": "recordings/trial_016_seed_2015.mp4",
+      "frames": 1800,
+      "sha256": "c9650039f2d55a2caccdd6edd79e3cc22d671dce483082f6249f9ebb3f6eb6f5"
+    },
+    {
+      "seed": 2016,
+      "task_success": false,
+      "file": "recordings/trial_017_seed_2016.mp4",
+      "frames": 1800,
+      "sha256": "2f08376186f7a5e41d91ce4a4643ae9006d153fd423571467f0dc369a0164bb8"
+    },
+    {
+      "seed": 2017,
+      "task_success": true,
+      "file": "recordings/trial_018_seed_2017.mp4",
+      "frames": 1800,
+      "sha256": "c8b4148156019e3c40e0db809b292fef02a15643d08105d2831d21c028612aa7"
+    },
+    {
+      "seed": 2018,
+      "task_success": true,
+      "file": "recordings/trial_019_seed_2018.mp4",
+      "frames": 1800,
+      "sha256": "89b9c916044bfdc5d27ddbb99d74961d5c124b3260a016d23446d1988b0fcdfa"
+    },
+    {
+      "seed": 2019,
+      "task_success": true,
+      "file": "recordings/trial_020_seed_2019.mp4",
+      "frames": 1800,
+      "sha256": "8e6f6bb0deb26b0a001e464036a0fe72d8434c87f00a308ea773ddbaf7484620"
+    },
+    {
+      "seed": 2020,
+      "task_success": true,
+      "file": "recordings/trial_021_seed_2020.mp4",
+      "frames": 1800,
+      "sha256": "d450aebf98530b164e59de0bb25b21315d97e0cc2197f440fa022b0522f77519"
+    },
+    {
+      "seed": 2021,
+      "task_success": true,
+      "file": "recordings/trial_022_seed_2021.mp4",
+      "frames": 1800,
+      "sha256": "2967ac5ef91fb4f88e6fcecf4e827f237e1cf7f10af7457b38585d0e4778472e"
+    },
+    {
+      "seed": 2022,
+      "task_success": true,
+      "file": "recordings/trial_023_seed_2022.mp4",
+      "frames": 1800,
+      "sha256": "e35902090357ccecb5cfddfc505e6c9034be670f335117ec8e181e37773c717b"
+    },
+    {
+      "seed": 2023,
+      "task_success": false,
+      "file": "recordings/trial_024_seed_2023.mp4",
+      "frames": 660,
+      "sha256": "aa38ef71e4c555883eb6b8956bbfe3824e9d5a2b0106936acdd8218dfb03da23"
+    },
+    {
+      "seed": 2024,
+      "task_success": true,
+      "file": "recordings/trial_025_seed_2024.mp4",
+      "frames": 1800,
+      "sha256": "a55a906e1244f34681f20897777b38cf6234e1b20b683163f3229fc1001b485e"
+    },
+    {
+      "seed": 2025,
+      "task_success": true,
+      "file": "recordings/trial_026_seed_2025.mp4",
+      "frames": 1800,
+      "sha256": "54c1f709697cbabc1eae65c34e5ef3e3b4f5999b55b7d9bede03049828c24507"
+    },
+    {
+      "seed": 2026,
+      "task_success": true,
+      "file": "recordings/trial_027_seed_2026.mp4",
+      "frames": 1800,
+      "sha256": "4ea86e12d115d11087646698f2291070a9634020c58a54a4128951d638efb732"
+    },
+    {
+      "seed": 2027,
+      "task_success": false,
+      "file": "recordings/trial_028_seed_2027.mp4",
+      "frames": 660,
+      "sha256": "f2476736f499160a4c018d0dcfadd1ef7b1066d9fe05e754c73aeb86116f47a5"
+    },
+    {
+      "seed": 2028,
+      "task_success": true,
+      "file": "recordings/trial_029_seed_2028.mp4",
+      "frames": 1800,
+      "sha256": "ae384da998325ecab2577ace70259ed93acf5a39b7e5046b171ef10ecacd7497"
+    },
+    {
+      "seed": 2029,
+      "task_success": true,
+      "file": "recordings/trial_030_seed_2029.mp4",
+      "frames": 1800,
+      "sha256": "a96e1a5de793b64446b881279e8585e269fde9f7a000ccc52718ce19917e851a"
+    },
+    {
+      "seed": 2030,
+      "task_success": true,
+      "file": "recordings/trial_031_seed_2030.mp4",
+      "frames": 1800,
+      "sha256": "283b0ee9a00241f05581d508e2a982efcccbdffc1ae952f3816027e609884488"
+    },
+    {
+      "seed": 2031,
+      "task_success": true,
+      "file": "recordings/trial_032_seed_2031.mp4",
+      "frames": 1800,
+      "sha256": "0f983f6c1c1c6d40f60ce895ead397a5fc6aadd48c4b1cf553f5da9ac2846bf8"
+    },
+    {
+      "seed": 2032,
+      "task_success": true,
+      "file": "recordings/trial_033_seed_2032.mp4",
+      "frames": 1800,
+      "sha256": "64f5cfdcbfc19bf37868aa2a19fe509ba31921dc9c5e18575ca756356f5085c8"
+    },
+    {
+      "seed": 2033,
+      "task_success": false,
+      "file": "recordings/trial_034_seed_2033.mp4",
+      "frames": 1800,
+      "sha256": "256a660e75f4b03e12dd6358f398cbdcf9718c070d3507778b5e2b520ebbe9cf"
+    },
+    {
+      "seed": 2034,
+      "task_success": true,
+      "file": "recordings/trial_035_seed_2034.mp4",
+      "frames": 1800,
+      "sha256": "b0900b3172cec884fe0a71079d7e4f24cb539a7055c5d0c41d562ee612dea911"
+    },
+    {
+      "seed": 2035,
+      "task_success": false,
+      "file": "recordings/trial_036_seed_2035.mp4",
+      "frames": 1800,
+      "sha256": "f009fe747c16cacbfb06d7d4ff4b0b73d3a29ed1296a40f0a483633c435e64d5"
+    },
+    {
+      "seed": 2036,
+      "task_success": true,
+      "file": "recordings/trial_037_seed_2036.mp4",
+      "frames": 1800,
+      "sha256": "58edc7162311e4a6f722f890a1add216fff045ca69890a9a786eaca91ad2fcda"
+    },
+    {
+      "seed": 2037,
+      "task_success": true,
+      "file": "recordings/trial_038_seed_2037.mp4",
+      "frames": 1800,
+      "sha256": "1d5d1b3a03d8259dcbe7cf4da48a0a309f9bd392e0ca085438960c57d85ec2dd"
+    },
+    {
+      "seed": 2038,
+      "task_success": true,
+      "file": "recordings/trial_039_seed_2038.mp4",
+      "frames": 1800,
+      "sha256": "26f3493d72012202cddca5c55181a9857deac9d38a19c2c2c36fffd8e3f4f912"
+    },
+    {
+      "seed": 2039,
+      "task_success": true,
+      "file": "recordings/trial_040_seed_2039.mp4",
+      "frames": 1800,
+      "sha256": "979efe8584e6ef6a4ce20151c1cd5dafe0bb080e81e0f3813a598660aab8fbac"
+    },
+    {
+      "seed": 2040,
+      "task_success": false,
+      "file": "recordings/trial_041_seed_2040.mp4",
+      "frames": 660,
+      "sha256": "6efffc53780e1b1230827cdcf7e9765926d4db9c1311fea52a09397a6c2995d5"
+    },
+    {
+      "seed": 2041,
+      "task_success": false,
+      "file": "recordings/trial_042_seed_2041.mp4",
+      "frames": 660,
+      "sha256": "bf90ee75c09efb7cd2de8a0981ec2ea79febde439dfa9bd63670e2bbfb574ce4"
+    },
+    {
+      "seed": 2042,
+      "task_success": false,
+      "file": "recordings/trial_043_seed_2042.mp4",
+      "frames": 1470,
+      "sha256": "6c9318ac2f8e99b799cc68a6513a9783fc67f53728b84094c676d0909e4adff0"
+    },
+    {
+      "seed": 2043,
+      "task_success": true,
+      "file": "recordings/trial_044_seed_2043.mp4",
+      "frames": 1800,
+      "sha256": "3ce55236abb258e185242dea7c0e690749c1aba95c6853edb2346297dbc36767"
+    },
+    {
+      "seed": 2044,
+      "task_success": false,
+      "file": "recordings/trial_045_seed_2044.mp4",
+      "frames": 660,
+      "sha256": "62dd3949062cb6575b8117c2ccfebf998c5df6563eb183ecda9b255def1bd604"
+    },
+    {
+      "seed": 2045,
+      "task_success": false,
+      "file": "recordings/trial_046_seed_2045.mp4",
+      "frames": 1800,
+      "sha256": "5554f1e6d9cc77a70980b5e7b8f23347c88ea3a3a5d68a636316b871e1bd2251"
+    },
+    {
+      "seed": 2046,
+      "task_success": true,
+      "file": "recordings/trial_047_seed_2046.mp4",
+      "frames": 1800,
+      "sha256": "5ed59947047d8439c6fb2af6a2cce10422925cba9fc3368f37350c98c382d504"
+    },
+    {
+      "seed": 2047,
+      "task_success": true,
+      "file": "recordings/trial_048_seed_2047.mp4",
+      "frames": 1800,
+      "sha256": "7e56164e869b2cb1e4818d963c5936f7b59c659308e6a8ee7c38321713326405"
+    },
+    {
+      "seed": 2048,
+      "task_success": true,
+      "file": "recordings/trial_049_seed_2048.mp4",
+      "frames": 1800,
+      "sha256": "6d67e586eb0755f4a40a17e11baaee8bc40b847ddacb6603021534973569936b"
+    },
+    {
+      "seed": 2049,
+      "task_success": true,
+      "file": "recordings/trial_050_seed_2049.mp4",
+      "frames": 1800,
+      "sha256": "ab42130991795ea2bb5c4998e51452c24255e619f3e362f0bbc99c0281b14706"
+    },
+    {
+      "seed": 2050,
+      "task_success": false,
+      "file": "recordings/trial_051_seed_2050.mp4",
+      "frames": 660,
+      "sha256": "2b29a521608afa4ecffc3c306e1b749b640285d9dd8c0025db152b2fb47af138"
+    },
+    {
+      "seed": 2051,
+      "task_success": true,
+      "file": "recordings/trial_052_seed_2051.mp4",
+      "frames": 1800,
+      "sha256": "ccb5f1500a1410a44459964486621ddd0f898e7ee80cc9938d793ca4fef3df2d"
+    },
+    {
+      "seed": 2052,
+      "task_success": false,
+      "file": "recordings/trial_053_seed_2052.mp4",
+      "frames": 1800,
+      "sha256": "21914157a83222b549d406495a55a76e12ca15081958bb8f26712c16fd3a735b"
+    },
+    {
+      "seed": 2053,
+      "task_success": false,
+      "file": "recordings/trial_054_seed_2053.mp4",
+      "frames": 1800,
+      "sha256": "95fbe7674d458b121727e52200eba1aa893d0ae59f66a7d08494830aee320878"
+    },
+    {
+      "seed": 2054,
+      "task_success": true,
+      "file": "recordings/trial_055_seed_2054.mp4",
+      "frames": 1800,
+      "sha256": "d69e991002df19fd1a4564bb602922d60f58b7ad56ca8bda9ad9451e8e6f9c1c"
+    },
+    {
+      "seed": 2055,
+      "task_success": false,
+      "file": "recordings/trial_056_seed_2055.mp4",
+      "frames": 660,
+      "sha256": "954098a7d54558c0a0dacd796881f156bf23e2d79e182f5604df5d054af215db"
+    },
+    {
+      "seed": 2056,
+      "task_success": false,
+      "file": "recordings/trial_057_seed_2056.mp4",
+      "frames": 660,
+      "sha256": "ce7d0b4193eb2e2148f845060b0eae7f3a6de1f30a7e3fbba050a8bbd5e022d7"
+    },
+    {
+      "seed": 2057,
+      "task_success": false,
+      "file": "recordings/trial_058_seed_2057.mp4",
+      "frames": 660,
+      "sha256": "cea321e5647231a57994af599a0bb8cd4bd3e008b6ee07d66f6194ed36d00fe9"
+    },
+    {
+      "seed": 2058,
+      "task_success": true,
+      "file": "recordings/trial_059_seed_2058.mp4",
+      "frames": 1800,
+      "sha256": "60bdabc7f5e3406f47c6dac8cb8937f84e8eff8750189456dacba674ad2a9d1e"
+    },
+    {
+      "seed": 2059,
+      "task_success": false,
+      "file": "recordings/trial_060_seed_2059.mp4",
+      "frames": 660,
+      "sha256": "3f79578b3941fcb03b1fcb05be2cfb62f9aea6d835b5aa0c5ff1e5dbc41c2b69"
+    },
+    {
+      "seed": 2060,
+      "task_success": true,
+      "file": "recordings/trial_061_seed_2060.mp4",
+      "frames": 1800,
+      "sha256": "bf55f2486e58c27c231e3c051bc49389fc5b20acdbb8e80d15010a89167e7b82"
+    },
+    {
+      "seed": 2061,
+      "task_success": true,
+      "file": "recordings/trial_062_seed_2061.mp4",
+      "frames": 1800,
+      "sha256": "4879178969efa54ca68f9c0e013dd286e1b8dd710df4147b93d10ce787cc87c2"
+    },
+    {
+      "seed": 2062,
+      "task_success": true,
+      "file": "recordings/trial_063_seed_2062.mp4",
+      "frames": 1800,
+      "sha256": "e4463b17be6c1ba168aa2481bd188dc1ffbb660110e4ab20b819d5f869cb95fd"
+    },
+    {
+      "seed": 2063,
+      "task_success": true,
+      "file": "recordings/trial_064_seed_2063.mp4",
+      "frames": 1800,
+      "sha256": "b78d53999220c11d87337b291a018fc41af95abf9ecc194b4a0b16ffd2ce5895"
+    },
+    {
+      "seed": 2064,
+      "task_success": true,
+      "file": "recordings/trial_065_seed_2064.mp4",
+      "frames": 1800,
+      "sha256": "7ee47b02b52e0be83f590d0291b1d718f7f1d52761a9438a7f23810f323a6b4c"
+    },
+    {
+      "seed": 2065,
+      "task_success": true,
+      "file": "recordings/trial_066_seed_2065.mp4",
+      "frames": 1800,
+      "sha256": "357e013bbe5bd26b2b0e5feb60b80ca22be24a75e3c7b5b8f727e6b5ead5e007"
+    },
+    {
+      "seed": 2066,
+      "task_success": true,
+      "file": "recordings/trial_067_seed_2066.mp4",
+      "frames": 1800,
+      "sha256": "115e4cba069012b3b1b103a911c497988239e84196348b699823f580fe473629"
+    },
+    {
+      "seed": 2067,
+      "task_success": true,
+      "file": "recordings/trial_068_seed_2067.mp4",
+      "frames": 1800,
+      "sha256": "0ca4e39df7b228a1713041025ff09ba972c60186a5da04b1dda16e6963dc3cb2"
+    },
+    {
+      "seed": 2068,
+      "task_success": true,
+      "file": "recordings/trial_069_seed_2068.mp4",
+      "frames": 1800,
+      "sha256": "50c1bceab51f034cca35cd09d96e28252f39fc456faa06b933cc775a88e17970"
+    },
+    {
+      "seed": 2069,
+      "task_success": false,
+      "file": "recordings/trial_070_seed_2069.mp4",
+      "frames": 1800,
+      "sha256": "3bdf93b2ca2f06cdbe4eccc950b654a8bb0736ded0c606d90bd383b41c816c44"
+    },
+    {
+      "seed": 2070,
+      "task_success": true,
+      "file": "recordings/trial_071_seed_2070.mp4",
+      "frames": 1800,
+      "sha256": "3ced179fab373940cc30e10454dcbdb8af2da8ba3189437a325bcfad26a58020"
+    },
+    {
+      "seed": 2071,
+      "task_success": true,
+      "file": "recordings/trial_072_seed_2071.mp4",
+      "frames": 1800,
+      "sha256": "ff0e22f814b572c9eb772b1025f06f3da833c7b32f320227c643a95cf46b82a2"
+    },
+    {
+      "seed": 2072,
+      "task_success": true,
+      "file": "recordings/trial_073_seed_2072.mp4",
+      "frames": 1800,
+      "sha256": "24201ba141bba96a955cd58ed0bdc14ad8045c65977c4fbe3064beb0ec300140"
+    },
+    {
+      "seed": 2073,
+      "task_success": true,
+      "file": "recordings/trial_074_seed_2073.mp4",
+      "frames": 1800,
+      "sha256": "0ac064f8d410ca081bb1eb8a7d26e80491b639adefd18e6cb445727f2f82dab1"
+    },
+    {
+      "seed": 2074,
+      "task_success": true,
+      "file": "recordings/trial_075_seed_2074.mp4",
+      "frames": 1800,
+      "sha256": "23a4ac9c744393088f1bf17f70e9adcce49d4529c3929b488fa95455183a3039"
+    },
+    {
+      "seed": 2075,
+      "task_success": true,
+      "file": "recordings/trial_076_seed_2075.mp4",
+      "frames": 1800,
+      "sha256": "2e4452ad404e38ce0377f1053dfa96734083fe57ddac61bd6bac1cd9e6026018"
+    },
+    {
+      "seed": 2076,
+      "task_success": true,
+      "file": "recordings/trial_077_seed_2076.mp4",
+      "frames": 1800,
+      "sha256": "18cb827774386b246e2e83ac929448185ffada7ab193437de14ac9a8593e74c0"
+    },
+    {
+      "seed": 2077,
+      "task_success": false,
+      "file": "recordings/trial_078_seed_2077.mp4",
+      "frames": 660,
+      "sha256": "bee3098a0da66164b1f082d7343349118bf6bd915ecad4c99be4a45b660064a1"
+    }
+  ],
+  "increased_data_proves_policy_success": false
+}

@@ -1,0 +1,890 @@
+{
+  "passed": true,
+  "episodes": 55,
+  "frames": 99000,
+  "training_episodes": 49,
+  "validation_episodes": 6,
+  "checked_video_segments": 110,
+  "videos": [
+    {
+      "episode": 0,
+      "camera": "observation.images.base_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 0,
+      "camera": "observation.images.left_wrist_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 1,
+      "camera": "observation.images.base_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 1,
+      "camera": "observation.images.left_wrist_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 2,
+      "camera": "observation.images.base_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 2,
+      "camera": "observation.images.left_wrist_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 3,
+      "camera": "observation.images.base_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 3,
+      "camera": "observation.images.left_wrist_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 4,
+      "camera": "observation.images.base_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 4,
+      "camera": "observation.images.left_wrist_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 5,
+      "camera": "observation.images.base_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 5,
+      "camera": "observation.images.left_wrist_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 6,
+      "camera": "observation.images.base_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 6,
+      "camera": "observation.images.left_wrist_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 7,
+      "camera": "observation.images.base_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 7,
+      "camera": "observation.images.left_wrist_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 8,
+      "camera": "observation.images.base_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 8,
+      "camera": "observation.images.left_wrist_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 9,
+      "camera": "observation.images.base_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 9,
+      "camera": "observation.images.left_wrist_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 10,
+      "camera": "observation.images.base_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 10,
+      "camera": "observation.images.left_wrist_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 11,
+      "camera": "observation.images.base_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 11,
+      "camera": "observation.images.left_wrist_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 12,
+      "camera": "observation.images.base_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 12,
+      "camera": "observation.images.left_wrist_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 13,
+      "camera": "observation.images.base_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 13,
+      "camera": "observation.images.left_wrist_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 14,
+      "camera": "observation.images.base_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 14,
+      "camera": "observation.images.left_wrist_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 15,
+      "camera": "observation.images.base_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 15,
+      "camera": "observation.images.left_wrist_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 16,
+      "camera": "observation.images.base_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 16,
+      "camera": "observation.images.left_wrist_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 17,
+      "camera": "observation.images.base_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 17,
+      "camera": "observation.images.left_wrist_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 18,
+      "camera": "observation.images.base_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 18,
+      "camera": "observation.images.left_wrist_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 19,
+      "camera": "observation.images.base_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 19,
+      "camera": "observation.images.left_wrist_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 20,
+      "camera": "observation.images.base_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 20,
+      "camera": "observation.images.left_wrist_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 21,
+      "camera": "observation.images.base_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 21,
+      "camera": "observation.images.left_wrist_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 22,
+      "camera": "observation.images.base_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 22,
+      "camera": "observation.images.left_wrist_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 23,
+      "camera": "observation.images.base_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 23,
+      "camera": "observation.images.left_wrist_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 24,
+      "camera": "observation.images.base_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 24,
+      "camera": "observation.images.left_wrist_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 25,
+      "camera": "observation.images.base_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 25,
+      "camera": "observation.images.left_wrist_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 26,
+      "camera": "observation.images.base_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 26,
+      "camera": "observation.images.left_wrist_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 27,
+      "camera": "observation.images.base_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 27,
+      "camera": "observation.images.left_wrist_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 28,
+      "camera": "observation.images.base_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 28,
+      "camera": "observation.images.left_wrist_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 29,
+      "camera": "observation.images.base_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 29,
+      "camera": "observation.images.left_wrist_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 30,
+      "camera": "observation.images.base_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 30,
+      "camera": "observation.images.left_wrist_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 31,
+      "camera": "observation.images.base_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 31,
+      "camera": "observation.images.left_wrist_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 32,
+      "camera": "observation.images.base_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 32,
+      "camera": "observation.images.left_wrist_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 33,
+      "camera": "observation.images.base_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 33,
+      "camera": "observation.images.left_wrist_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 34,
+      "camera": "observation.images.base_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 34,
+      "camera": "observation.images.left_wrist_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 35,
+      "camera": "observation.images.base_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 35,
+      "camera": "observation.images.left_wrist_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 36,
+      "camera": "observation.images.base_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 36,
+      "camera": "observation.images.left_wrist_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 37,
+      "camera": "observation.images.base_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 37,
+      "camera": "observation.images.left_wrist_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 38,
+      "camera": "observation.images.base_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 38,
+      "camera": "observation.images.left_wrist_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 39,
+      "camera": "observation.images.base_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 39,
+      "camera": "observation.images.left_wrist_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 40,
+      "camera": "observation.images.base_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 40,
+      "camera": "observation.images.left_wrist_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 41,
+      "camera": "observation.images.base_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 41,
+      "camera": "observation.images.left_wrist_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 42,
+      "camera": "observation.images.base_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 42,
+      "camera": "observation.images.left_wrist_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 43,
+      "camera": "observation.images.base_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 43,
+      "camera": "observation.images.left_wrist_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 44,
+      "camera": "observation.images.base_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 44,
+      "camera": "observation.images.left_wrist_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 45,
+      "camera": "observation.images.base_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 45,
+      "camera": "observation.images.left_wrist_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 46,
+      "camera": "observation.images.base_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 46,
+      "camera": "observation.images.left_wrist_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 47,
+      "camera": "observation.images.base_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 47,
+      "camera": "observation.images.left_wrist_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 48,
+      "camera": "observation.images.base_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 48,
+      "camera": "observation.images.left_wrist_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 49,
+      "camera": "observation.images.base_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 49,
+      "camera": "observation.images.left_wrist_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 50,
+      "camera": "observation.images.base_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 50,
+      "camera": "observation.images.left_wrist_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 51,
+      "camera": "observation.images.base_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 51,
+      "camera": "observation.images.left_wrist_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 52,
+      "camera": "observation.images.base_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 52,
+      "camera": "observation.images.left_wrist_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 53,
+      "camera": "observation.images.base_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 53,
+      "camera": "observation.images.left_wrist_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 54,
+      "camera": "observation.images.base_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    },
+    {
+      "episode": 54,
+      "camera": "observation.images.left_wrist_0_rgb",
+      "r_frame_rate": "30/1",
+      "start_time": "0.000000",
+      "duration": "60.000000",
+      "nb_read_frames": "1800"
+    }
+  ]
+}

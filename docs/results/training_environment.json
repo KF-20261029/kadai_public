@@ -1,0 +1,22 @@
+{
+  "versions": {
+    "vlash": "0.1.0",
+    "lerobot": "0.4.1",
+    "torch": "2.7.1+cu126",
+    "torchvision": "0.22.1+cu126",
+    "torchcodec": "0.5",
+    "transformers": "4.53.3",
+    "peft": "0.18.0",
+    "mujoco": "3.3.7"
+  },
+  "source_revisions": {
+    "vlash": "22cbabfee0f57874987c75a35a7dac129e695db0",
+    "release": "73167f4dba88633aeec95ba7a3b3881916fa9aaa"
+  },
+  "release_patch_sha256": {
+    "modeling_pi05.py": "daa223158577c305fc1ed2f2701f543f42cc2dd332c786d4e4bef2dcd32ed035",
+    "run.py": "dbd210506695a4d170d661d9e71860a9f534ce591f53ef6573c7e45db8541811",
+    "train.py": "baf00f918ebca33b5fccf0f24d1365659fa63cd8efb2f6c7ea59a929d967d648",
+    "video_utils.py": "3c33c0618714afc54383a19ee5c1bf354f5e47a37ccb36a77701090dd85e91bf"
+  }
+}

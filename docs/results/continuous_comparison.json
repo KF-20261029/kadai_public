@@ -1,0 +1,64 @@
+{
+  "trials_per_condition": 10,
+  "success_criterion": "Three pens inserted and released for at least 2 seconds",
+  "paused_successes": 2,
+  "continuous_successes": 1,
+  "paused_success_rate": 0.2,
+  "continuous_success_rate": 0.1,
+  "median_inference_wall_seconds": 0.14356700517237186,
+  "median_observation_age_seconds": 0.383333333,
+  "max_idle_before_send_seconds": 0.0033333340000000003,
+  "chunks_with_inference_during_prior_action": 430,
+  "pairs": [
+    {
+      "seed": 7100,
+      "paused": true,
+      "continuous": false
+    },
+    {
+      "seed": 7101,
+      "paused": false,
+      "continuous": false
+    },
+    {
+      "seed": 7102,
+      "paused": true,
+      "continuous": false
+    },
+    {
+      "seed": 7103,
+      "paused": false,
+      "continuous": false
+    },
+    {
+      "seed": 7104,
+      "paused": false,
+      "continuous": false
+    },
+    {
+      "seed": 7105,
+      "paused": false,
+      "continuous": false
+    },
+    {
+      "seed": 7106,
+      "paused": false,
+      "continuous": false
+    },
+    {
+      "seed": 7107,
+      "paused": false,
+      "continuous": false
+    },
+    {
+      "seed": 7108,
+      "paused": false,
+      "continuous": false
+    },
+    {
+      "seed": 7109,
+      "paused": false,
+      "continuous": true
+    }
+  ]
+}

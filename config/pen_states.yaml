@@ -1,0 +1,7 @@
+/**:
+  ros__parameters:
+    publish_rate: 300.0
+    body_names: [pen_0, pen_1, pen_2]
+    mujoco_plugins:
+      free_joint_state_publisher:
+        type: mujoco_ros2_control_plugins/FreeJointStatePublisherPlugin
