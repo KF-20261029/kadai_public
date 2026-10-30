@@ -12,9 +12,9 @@ SO-101用の `dongyoonkim/so101-pi05-base` を基に、成功デモ55試行・99
 | 追加学習後 | 一時停止 | 10回中2回成功 |
 | 追加学習後 | 継続 | 10回中1回成功 |
 
-各試行はシミュレータ内で約75秒です。３本すべてを収納し、グリッパーから離れた状態を２秒維持した場合を成功としました。入出力の正規化には、両モデルとも同じタスク用統計を使いました。
+各試行はシミュレータ内で約75秒です。３本すべてを収納し、グリッパーから離れた状態を２秒維持した場合を成功としました。入出力の正規化には、両モデルとも同じタスク用統計を使いました。評価対象はこの10配置で、実機評価は行っていません。
 
-詳細は[提出用PDF](docs/report.pdf)と[集計結果](docs/results)を参照してください。
+[提出用PDF](docs/report.pdf)と[試行別の集計結果](docs/results)を収録しています。
 
 ## システム構成
 
@@ -31,20 +31,20 @@ SO-101用の `dongyoonkim/so101-pi05-base` を基に、成功デモ55試行・99
 | `training/` | LoRAの学習環境・設定・起動スクリプト |
 | `docs/` | 提出用PDF、実験結果 |
 
-配布する重みは学習完了後のLoRAです。教師データ、生のROS記録、学習中間チェックポイントは含めていません。
+学習したLoRAと検証・評価の記録を収録しています。教師データ本体とROS bagは含めていません。
 
 ## データセット
 
-本実験では、自作の教師データ55試行・99,000フレームでLoRAを学習しました。このリポジトリには、データ本体の代わりに、その生成コードを収録しています。
+教師データは、MuJoCo上で逆運動学による把持・収納を実行して作成しました。生成・選別・形式変換のコードは `teacher/` に収録しています。
 
 - **学習済みのLoRAを動かす場合**：[セットアップ](#セットアップ)と[評価](#評価)を実行します。
-- **自分で学習する場合**：[教師データの生成](teacher/README.md)、[LoRAの学習](training/README.md)の順に実行します。
+- **再学習する場合**：[教師データの生成](teacher/README.md)、[LoRAの学習](training/README.md)の順に実行します。
 
 ### データ形式
 
 当初はLeRobot v3形式で教師データを収集していましたが、その後、v2.1形式を前提とする学習コードを採用したため、収集済みのデータを変換しました。完成したデータの保存先は `teacher/outputs/pen_dataset/`、学習設定でのIDは `local/so101_pens` です。１試行は60秒・1,800フレーム（30 Hz）で、学習には55試行を使います。
 
-以下は、生成する学習用データのフィールドです。型と形状は `meta/info.json` の表記に従います。
+学習用データのフィールドは次のとおりです（`meta/info.json`）。
 
 | フィールド | 型 | 形状 | 内容 |
 | --- | --- | --- | --- |
@@ -97,7 +97,7 @@ Grab pens and place into pen holder
 git lfs pull
 ```
 
-ペン収納用LoRAはGit LFSで管理しています。取得後の `models/pen_lora/lora_adapters/adapter_model.safetensors` は約118 MiBです。モデルの利用条件は [MODEL_LICENSE.md](MODEL_LICENSE.md) に記載しています。
+ペン収納用LoRAはGit LFSで管理しています。取得後の `models/pen_lora/lora_adapters/adapter_model.safetensors` は約118 MiBです。
 
 ### Dockerイメージとベースモデルの準備
 
@@ -106,7 +106,7 @@ docker compose build
 docker compose run --rm ros2 python scripts/download_model.py
 ```
 
-ベースモデルとトークナイザは公開元から取得し、Composeの専用ボリュームに保存します。リビジョンとSHA-256は `config/model_assets.json` に固定しています。`Pinned model and original tokenizer verified.` が完了表示です。
+ベースモデルとトークナイザは公開元から取得し、Composeの専用ボリュームに保存します。リビジョンとSHA-256は `config/model_assets.json` に固定しています。
 
 ### デスクトップの起動とROSパッケージのビルド
 
@@ -125,7 +125,7 @@ python /usr/bin/colcon build --packages-select so101_policy
 source install/setup.bash
 ```
 
-`1 package finished` が表示されればビルド完了です。ホストのブラウザで次を開くと、noVNCのデスクトップを表示できます。
+noVNCの接続先は次のとおりです。
 
 ```text
 http://localhost:6080/vnc.html?autoconnect=1&resize=scale
@@ -147,13 +147,13 @@ source /workspace/ros2_ws/install/setup.bash
 ros2 launch /workspace/launch/so101.launch.py controller:=trajectory_controller
 ```
 
-`Configured and activated trajectory_controller` が起動完了の表示です。別の区画で画像ビューアを開き、`/mujoco_camera_plugin/overview/color` を選択します。
+別のターミナルで画像ビューアを開き、`/mujoco_camera_plugin/overview/color` を選択します。
 
 ```bash
 rqt_image_view
 ```
 
-以降の評価中はシミュレータを起動したままにし、操作には別の区画を使います。初期配置の復元と停止・再開は評価スクリプトが行います。
+評価コマンドは、シミュレータを起動したまま別のターミナルで実行します。初期配置の復元と停止・再開は評価スクリプトが行います。
 
 ## 評価
 
@@ -168,7 +168,7 @@ bash scripts/run_evaluation.sh lora
 python scripts/summarize_evaluation.py outputs/lora_comparison
 ```
 
-両モデルを同じ10配置で評価します。各ペンの初期位置をXY方向に±12 mm、向きを±0.4 rad変化させ、MuJoCo 3.3.7で静定させた配置を使用します。初期配置と推論seed（7100〜7109）は両モデルで共有します。推論中はシミュレーションを止め、50指令すべてを30 Hzで実行するたびに再観測・再予測します。各試行の完了表示は `Completed base trial` または `Completed lora trial` です。
+両モデルを同じ10配置で評価します。各ペンの初期位置をXY方向に±12 mm、向きを±0.4 rad変化させ、MuJoCo 3.3.7で静定させた配置を使用します。初期配置と推論seed（7100〜7109）は両モデルで共有します。推論中はシミュレーションを止め、50指令すべてを30 Hzで実行するたびに再観測・再予測します。
 
 ### 推論中もシミュレーションを進める場合
 
@@ -181,7 +181,7 @@ done
 python scripts/summarize_realtime.py
 ```
 
-追加学習後の重みを使い、チャンク終了の0.35秒前から次の観測・推論を始めます。次の指令は前のチャンクが終了してから送ります。各試行の完了表示は `Completed real-time trial` です。
+追加学習後の重みを使い、チャンク終了の0.35秒前から次の観測・推論を始めます。次の指令は前のチャンクが終了してから送ります。
 
 ### 出力ファイル
 
@@ -195,12 +195,16 @@ python scripts/summarize_realtime.py
 
 成功判定には、ROS bagに保存したペン姿勢と関節状態を使用します。MuJoCo 3.3.7上で収納位置と指との接触を確認し、３本すべてが収納され、両側の指から離れた状態が２秒以上続いた試行を成功とします。終了時の状態も別に記録し、状態記録が不足している試行は集計を中断します。
 
-再実行時は、既存の結果を上書きしないよう、`EVAL_OUTPUT`（一時停止時）と `REALTIME_OUTPUT`（継続時）に新しい保存先を指定します。集計時も同じ保存先を渡してください。
+評価スクリプトは既存の結果がある保存先では停止します。保存先は `EVAL_OUTPUT`（一時停止時）と `REALTIME_OUTPUT`（継続時）で指定します。
 
 ```bash
 export EVAL_OUTPUT=/workspace/outputs/repeat_paused
 export REALTIME_OUTPUT=/workspace/outputs/repeat_continuous
-# Run the evaluation commands above, then summarize the new outputs.
+```
+
+上記の評価コマンドを実行した後、指定した保存先を集計します。
+
+```bash
 python scripts/summarize_evaluation.py "$EVAL_OUTPUT"
 python scripts/summarize_realtime.py --paused "$EVAL_OUTPUT/lora" --continuous "$REALTIME_OUTPUT"
 ```
@@ -210,16 +214,6 @@ python scripts/summarize_realtime.py --paused "$EVAL_OUTPUT/lora" --continuous "
 ```bash
 python scripts/bag_to_video.py outputs/lora_comparison/lora/seed_7100 outputs/trial_review.mp4
 ```
-
-
-## 教師データの生成と学習
-
-1. [教師データの生成](teacher/README.md)：逆運動学による収集、完全な成功試行の選別、学習用形式への変換。
-2. [LoRAの学習](training/README.md)：55試行を使う学習と、生成した重みでの評価。
-
-## 制約
-
-結果は今回のタスク・10配置における評価です。実機動作は評価していません。学習データの分割については、[訓練・検証データの分割](#訓練検証データの分割)を参照してください。
 
 ## 検証記録
 
@@ -232,17 +226,13 @@ python scripts/bag_to_video.py outputs/lora_comparison/lora/seed_7100 outputs/tr
 | データ・モデルの対応 | [学習条件・データ選別記録・重みのハッシュ](docs/results/training_run.json) |
 | 収納性能 | [モデル間の比較](docs/results/lora_comparison.json)、[推論中の停止・継続の比較](docs/results/continuous_comparison.json) |
 
-データ検査はファイル・数値・映像の整合性を確認したものです。訓練・検証データの分割が学習時に反映されなかった問題は、[訓練・検証データの分割](#訓練検証データの分割)に記載しています。
-
 ## CI
 
-GitHub Actionsで、push・プルリクエスト時に次の検査を自動実行します。Actions画面からの手動実行にも対応しています。
+GitHub Actionsで、push・プルリクエスト時に次の検査を自動実行します（[設定](.github/workflows/ci.yml)）。
 
 - Pythonの構文と、JSON・YAML・TOML・XMLの形式検査。
 - 30 Hzの指令時刻と、評価結果の集計に関する単体テスト。
 - 推論・学習・教師データ収集用のDocker Compose設定の検証。
-
-設定は [.github/workflows/ci.yml](.github/workflows/ci.yml) です。GPU、モデルの取得、シミュレーションの実行は必要ありません。収納の成否は「評価」の手順で確認します。
 
 ## ライセンス
 

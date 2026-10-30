@@ -30,7 +30,7 @@ SO-101向けπ0.5の `dongyoonkim/so101-pi05-base` に、自作の教師デー�
 
 ![訓練lossの推移](../docs/results/training_loss.png)
 
-横軸は50ステップごとのログ記録番号を示します。図とCSVの数値は元ログの丸め値であり、独立した検証データでのlossではありません。学習後の収納性能は、教師データ収集とは別のseedによる10配置で評価しました。結果は[ルートREADME](../README.md#実験結果)に記載しました。
+横軸は50ステップごとのログ記録番号を示します。図とCSVの数値は元ログの丸め値であり、独立した検証データでのlossではありません。学習後の収納性能は、教師データ収集とは別のseedによる10配置で評価しました（[評価結果](../README.md#実験結果)）。
 
 | 記録 | 内容 |
 | --- | --- |
@@ -72,8 +72,6 @@ source /workspace/ros2_ws/install/setup.bash
 ros2 run so101_policy check_model --adapter /workspace/training/outputs/pen_lora/checkpoints/030000/pretrained_model
 '
 ```
-
-読み込みが完了すると、`Model ready.` と `State and action scaling restored.` が表示されます。
 
 収納性能の評価には、[ルートREADMEの実行方法](../README.md#実行方法)で起動するシミュレータを使用します。次のコマンドは、別のターミナルのコンテナ内で実行します。
 

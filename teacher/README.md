@@ -1,8 +1,8 @@
 # 教師データの生成
 
-この手順では、同梱の生成コードを実行し、LoRA学習用の教師データを作成します。データ本体は配布していません。生成コードはCodexを用いて作成しました。
+LoRA学習用の教師データを生成するコードです。ペン収納タスクと生成コードはCodexを用いて作成しました。
 
-収集、選別・検証、形式変換の順に進めると、LeRobot v2.1形式のデータが `teacher/outputs/pen_dataset/` に保存されます。フィールドの説明は[ルートREADME](../README.md#データ形式)を参照してください。
+収集、選別・検証、形式変換の順に進めると、LeRobot v2.1形式のデータが `teacher/outputs/pen_dataset/` に保存されます。フィールドは[データ形式](../README.md#データ形式)に記載しています。
 
 ## 生成方法
 
@@ -16,7 +16,7 @@
 
 本実験では、seed 2000〜2077の78試行中56試行が成功しました。その後、手首映像が１フレーム欠けた１試行を除外し、55試行・99,000フレームを学習用としました。各試行は60秒・1,800フレームです。初期位置はXY方向に±0.012 m、向きは±0.4 rad変化させました。
 
-実験時の収集・選別記録と学習用データのメタデータは `teacher/provenance/` に収録しています。検査結果は[収集後](../docs/results/collection_validation.json)と[形式変換後](../docs/results/dataset_validation.json)の両方で保存されています。以下では同じ条件で収集し、映像欠損のない成功試行を55試行選びます。
+実験時の収集・選別記録と学習用データのメタデータは `teacher/provenance/` に収録しています。検査結果は[収集後](../docs/results/collection_validation.json)と[形式変換後](../docs/results/dataset_validation.json)の両方で保存されています。
 
 ## スクリプト一覧
 
@@ -35,7 +35,7 @@
 
 収集には専用のCompose・Pixi環境を使用します。MuJoCo 3.3.7とLeRobotを含む依存は `teacher/pixi.lock` に固定しています。
 
-以下のDockerコマンドは、すべてホスト側のリポジトリ直下で実行します。ルートREADMEのセットアップで、ROS用Dockerイメージもビルドしておいてください。
+以下のDockerコマンドは、すべてホスト側のリポジトリ直下で実行します。形式変換には、[ルートREADME](../README.md#dockerイメージとベースモデルの準備)でビルドするROS用Dockerイメージを使用します。
 
 収集コードは１試行分の３カメラ画像をメモリに保持するため、60秒分の画像だけで約5 GBに加え、エンコードなどの作業領域を使います。
 
@@ -68,13 +68,13 @@ docker compose -f teacher/compose.yaml run --rm teacher pixi run python scripts/
   --evaluation-seeds 7100 7101 7102 7103 7104 7105 7106 7107 7108 7109
 ```
 
-上の `--max-episodes 55` は、完全な成功試行を元の順に55試行残します。余剰があればLeRobot標準APIで除外し、不足していれば出力を作る前に停止します。不足した場合は、試行数を増やし、別の出力先に収集し直してください。その場合、後続の入力パスも新しい出力先に合わせます。
+`--max-episodes 55` は、映像欠損のない成功試行を収集順に55試行残します。55試行に満たない場合は停止します。
 
 ## データ形式の変換
 
-選別した55試行を、学習環境が使用するLeRobot v2.1形式へ変換します。`prepare_pen_dataset.py` は55試行を前提としており、異なる件数なら停止します。変換器は公開リポジトリから固定リビジョンを取得します。
+選別した55試行をLeRobot v2.1形式へ変換し、元映像のフレーム区間から各試行の映像を再出力します。変換器の取得元と固定リビジョンは[出典](../THIRD_PARTY_NOTICES.md#教師データ収集用の依存)に記載しています。
 
-次の３コマンドはホストで実行し、処理にはROS用コンテナを使います。変換、映像の再出力、検証の順に進めます。
+次のコマンドはホストで実行し、処理にはROS用コンテナを使います。
 
 ```bash
 docker compose run --rm ros2 python teacher/scripts/prepare_pen_dataset.py \
@@ -89,6 +89,4 @@ docker compose run --rm ros2 python teacher/scripts/validate_pen_dataset.py
 
 生成後と変換後の検査結果は、それぞれ `teacher/outputs/demonstrations_expanded/validation.json` と `teacher/outputs/pen_dataset/validation.json` に保存されます。
 
-## 学習
-
-変換・検証後は、[LoRAの学習手順](../training/README.md)に従って学習します。
+学習設定と実行方法は[LoRAの学習](../training/README.md)に記載しています。
